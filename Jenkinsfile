@@ -6,7 +6,8 @@ pipeline {
           		 echo "Good to go"
 			}
 		}
-	} post {
+	} 
+	post {
 		always {
 			echo "Build completed anyway"
 		}
