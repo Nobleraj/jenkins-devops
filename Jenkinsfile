@@ -1,7 +1,7 @@
-pipeline{
+pipeline {
 	agent any
-	stages{
-		state('Build'){
+	stages {
+		state('Build') {
            echo "Good to go"
 		}
 	}
