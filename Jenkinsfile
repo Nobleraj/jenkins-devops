@@ -1,14 +1,17 @@
 pipeline {
-	agent {
-		docker {
-			image 'node:latest'
-		}
-	}
+	// agent { docker { image 'node:latest' } }
+	agent any
 	stages {
 		stage('Build') {
 			steps {
-				 sh 'node --version'
+				 // sh 'node --version'
           		 echo "Good to go"
+				 echo "PATH - $PATH"
+				 echo "BUILD NUMBER - $BUILD_NUMBER"
+				 echo "BUILD ID - $BUILD_ID"
+				 echo "JOB NAME - $JOB_NAME"
+				 echo "BUILD TAG - $BUILD_TAG"
+				 echo "BUILD URL - $BUILD_URL"
 			}
 		}
 	} 
